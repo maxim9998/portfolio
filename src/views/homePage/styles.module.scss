@@ -9,16 +9,3 @@
     background-position: 90%;
   }
 }
-
-.about_this_page {
-  background-color: #191d1d;
-  margin-top: -5px; /* To ensure no visible gap */
-}
-
-.home_about_header {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0) 7%, #191d1d 100%), url("../../assets/images/home_about_header.jpeg");
-  background-repeat: no-repeat;
-  // background-position: top;
-  background-position-y: 14%;
-  background-size: cover;
-}

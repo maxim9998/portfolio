@@ -3,7 +3,7 @@ import { TiArrowDownThick } from "react-icons/ti";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const LetsStartButton = () => {
+const LetsStartButtonArrow = () => {
   useGSAP(() => {
     const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.6 });
     tl.to("#to_next_section_button", {
@@ -28,4 +28,4 @@ const LetsStartButton = () => {
   );
 };
 
-export default LetsStartButton;
+export default LetsStartButtonArrow;

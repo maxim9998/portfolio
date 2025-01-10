@@ -1,10 +1,10 @@
-import TypingAnimationText from "../../../components/ui/typingAnimationText/TypingAnimationText.tsx";
-import LetsStartButton from "./LetsStartButton.tsx";
+import LetsStartButtonArrow from "../../components/ui/letsStartButtonArrow/LetsStartButtonArrow.tsx";
+import TypingAnimationText from "../../components/ui/typingAnimationText/TypingAnimationText.tsx";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-import styles from "../styles.module.scss";
+import styles from "./styles.module.scss";
 
 const subtitle = "Specializing in modern, responsive, and user-friendly digital solutions with seamless functionality and exceptional user experiences.";
 
@@ -39,7 +39,7 @@ const HeroSection = () => {
       </div>
       <a className="absolute bottom-10 flex flex-col items-center justify-center gap-4" href="#aboutThisPage">
         <h2 className="text-xl">Learn More About Me.</h2>
-        <LetsStartButton />
+        <LetsStartButtonArrow />
       </a>
     </section>
   );
