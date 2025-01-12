@@ -20,7 +20,7 @@ const SkillsHeader = () => {
       <h2 className="text-4xl text-dessert opacity-0" id="skills_header">
         Tech Stack & Expertise
       </h2>
-      <TypingAnimationText text={subtitle} id={"skills_header"} delay={1} />
+      <TypingAnimationText text={subtitle} delay={1} />
       <div className="flex items-center justify-center w-full">
         <RunningLine logos={mainStackSkills} className="w-2/3" />
       </div>
