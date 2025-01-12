@@ -16,14 +16,14 @@ const AboutMeCards = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: card,
-          start: "top 104%",
+          start: "top 90%",
           scrub: true,
         },
       });
 
       tl.from(card, {
         opacity: 0.1,
-        x: 140,
+        x: 30,
         duration: 0.2,
         ease: "none",
       }).to(card, {

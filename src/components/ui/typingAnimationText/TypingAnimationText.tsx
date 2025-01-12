@@ -1,32 +1,27 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { FC, useMemo } from "react";
+import { ScrollTrigger, TextPlugin } from "gsap/all";
+import { FC, useRef } from "react";
 
-const TypingAnimationText: FC<{ text: string; id: string; delay: number }> = ({ text, id, delay }) => {
-  const splittedText = useMemo(() => text.split(" "), [text]);
-
+const TypingAnimationText: FC<{ text: string; delay: number; className?: string }> = ({ text, delay, className }) => {
+  const title = useRef<HTMLHeadingElement>(null);
   useGSAP(() => {
-    gsap.fromTo(
-      `#${id} span`,
-      { opacity: 0, x: -20 },
-      {
-        opacity: 1,
-        x: 0,
-        delay,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power2.out",
-      }
-    );
+    gsap.registerPlugin(TextPlugin);
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(title?.current, {
+      scrollTrigger: {
+        trigger: title.current,
+        scrub: false,
+      },
+      duration: 3,
+      delay,
+      ease: "none",
+      text: text,
+    });
   }, []);
 
-  return (
-    <h3 id={id}>
-      {splittedText.map((word, i) => (
-        <span key={i}>{word + " "}</span>
-      ))}
-    </h3>
-  );
+  return <p className={`h-7 ${className}`} ref={title}></p>;
 };
 
 export default TypingAnimationText;

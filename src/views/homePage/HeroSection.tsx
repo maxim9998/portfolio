@@ -25,22 +25,24 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className={["w-full h-screen flex items-center justify-center flex-col gap-9 text-dessert", styles["home_page"]].join(" ")}>
-      <div className="italic xs:text-5xl text-center text-5xl font-semibold font-garamond">
-        <h1 className="opacity-0" id="header_start">
-          Hello, I’m Maksim
-        </h1>
-        <h1 className="opacity-0 mt-2" id="header_end">
-          Front-End Developer & Digital Creator
-        </h1>
+    <section className={`w-full ${styles["home_page"]}`}>
+      <div className="h-screen w-full flex items-center justify-center flex-col gap-9 text-dessert ">
+        <div className="italic xs:text-5xl text-center text-5xl font-semibold font-garamond">
+          <h1 className="opacity-0" id="header_start">
+            Hello, I’m Maksim
+          </h1>
+          <h1 className="opacity-0 mt-2" id="header_end">
+            Front-End Developer & Digital Creator
+          </h1>
+        </div>
+        <div className="w-1/3 text-center text-sm text-silver">
+          <TypingAnimationText text={subtitle} delay={2.5} />
+        </div>
+        <a className="absolute bottom-10 flex flex-col items-center justify-center gap-4" href="#aboutThisPage">
+          <h2 className="text-xl">Learn More About Me.</h2>
+          <LetsStartButtonArrow />
+        </a>
       </div>
-      <div className="w-1/3 text-center text-sm text-silver">
-        <TypingAnimationText text={subtitle} id="hero_subtitle" delay={2.5} />
-      </div>
-      <a className="absolute bottom-10 flex flex-col items-center justify-center gap-4" href="#aboutThisPage">
-        <h2 className="text-xl">Learn More About Me.</h2>
-        <LetsStartButtonArrow />
-      </a>
     </section>
   );
 };

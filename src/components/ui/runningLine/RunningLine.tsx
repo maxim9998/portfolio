@@ -8,15 +8,15 @@ import gsap from "gsap";
 
 import { ISkill } from "../../../utils/constants/skills";
 
-const RunningLine: FC<{ logos: ISkill[] }> = ({ logos }) => {
+const RunningLine: FC<{ logos: ISkill[]; className: string }> = ({ logos, className }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const logosDouble = useMemo(() => [...logos, ...logos], [logos]);
 
   useGSAP(() => {
     const scrollWidth = containerRef.current?.scrollWidth || 0;
-    const duration = 25;
-    const translateX = -Math.round(scrollWidth / 2) - 6;
+    const duration = logos.length;
+    const translateX = -(scrollWidth / 2 + 6);
 
     gsap.to(".logo_single", {
       translateX: translateX,
@@ -27,7 +27,7 @@ const RunningLine: FC<{ logos: ISkill[] }> = ({ logos }) => {
   }, []);
 
   return (
-    <div className="w-2/3">
+    <div className={className}>
       <div className={`flex items-center justify-start gap-24 px-20 scrollbar-hidden ${styles["blur_borders"]}`} ref={containerRef}>
         {logosDouble.map((logo, i) => (
           <Logo src={logo.logo} className={"logo_single"} key={logo.name + i} />
