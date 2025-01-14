@@ -1,10 +1,13 @@
 import { useRef } from "react";
-import SkillCard from "../../components/ui/skillCard/SkillCard";
-import { mainStackSkills } from "../../utils/constants/skills";
-import styles from "./style.module.scss";
+
+import SkillCard from "../../../components/ui/skillCard/SkillCard";
+import { mainStackSkills } from "./skillsData";
+
+import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+
+import styles from "../style.module.scss";
 
 const SkillsMain = () => {
   const skillsContainerRef = useRef<HTMLDivElement>(null);
@@ -18,7 +21,7 @@ const SkillsMain = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: skill,
-          start: "top bottom",
+          start: "top 100%",
           toggleActions: "play pause resume reset",
           scrub: false,
         },

@@ -1,8 +1,10 @@
 import { lazy, Suspense } from "react";
+import Footer from "../components/ui/footer/Footer.tsx";
 
 const HeroSection = lazy(() => import("./homePage/HeroSection.tsx"));
 const AboutMe = lazy(() => import("./aboutMe/AboutMe.tsx"));
 const Skills = lazy(() => import("./skills/Skills.tsx"));
+const ContactMe = lazy(() => import("./contactMe/ContactMe.tsx"));
 
 const HomePage = () => {
   return (
@@ -11,6 +13,8 @@ const HomePage = () => {
         <HeroSection />
         <AboutMe />
         <Skills />
+        <ContactMe />
+        <Footer />
       </Suspense>
     </main>
   );

@@ -1,3 +1,10 @@
+// .all_skills {
+//   background: linear-gradient(to bottom, #222629 0%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 85%, #222629 100%), url("../../assets/images/skills_background.jpg");
+//   background-repeat: no-repeat;
+//   background-position-x: 45%;
+//   background-size: cover;
+// }
+
 .skills_main_cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));

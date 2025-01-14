@@ -1,5 +1,5 @@
 import { FC, useMemo } from "react";
-import { ISoftSkill } from "../../../utils/constants/softSkills";
+import { ISoftSkill } from "../../../views/skills/softSkills/softSkillsData";
 import TypingAnimationText from "../typingAnimationText/TypingAnimationText";
 
 interface ISoftSkillExtended extends ISoftSkill {

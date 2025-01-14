@@ -16,34 +16,37 @@ const AboutMeCards = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: card,
-          start: "top 90%",
+          start: "top bottom",
           scrub: true,
         },
       });
 
       tl.from(card, {
-        opacity: 0.1,
-        x: 30,
-        duration: 0.2,
+        opacity: 0,
+        x: 20,
+        duration: 0.1,
         ease: "none",
       }).to(card, {
         x: 0,
         opacity: 1,
-        stagger: 2,
+        duration: 0.4,
+        ease: "none",
       });
     });
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-start justify-start gap-4" ref={cardsRef}>
+    <div className="w-full flex items-start justify-between flex-wrap" ref={cardsRef}>
       {aboutSections.map((section) => {
         return (
-          <div className="pl-4 py-3 max-w-3xl border-l" key={section.title}>
-            <div className="flex items-start justify-start gap-3">
-              {section.icon}
-              <p className="mb-3 text-xl font-bold text-dessert">{section.title}</p>
+          <div className={`w-[45%] flex items-center py-3 justify-start`} key={section.title}>
+            <div className={`w-full justify-self-end p-4 border rounded-lg`}>
+              <div className="flex items-start justify-start gap-3">
+                {section.icon}
+                <p className="mb-3 text-xl font-bold text-dessert">{section.title}</p>
+              </div>
+              <p className="text-justify text-silver">{section.content}</p>
             </div>
-            <p className="text-justify text-silver">{section.content}</p>
           </div>
         );
       })}

@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import RunningLine from "../../components/ui/runningLine/RunningLine";
 import TypingAnimationText from "../../components/ui/typingAnimationText/TypingAnimationText";
-import { mainStackSkills } from "../../utils/constants/skills";
+import { mainStackSkills } from "./mainSkills/skillsData";
 import gsap from "gsap";
 
 const subtitle = "Crafting seamless user experiences with modern web technologies.";

@@ -3,12 +3,21 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      black: "#0e0e0e",
-      silver: "#878681",
-      dessert: "#BFA48F",
-      slate: "#26292d",
-      lightBlue: "#5c6782",
-      glass: "rgba(255, 255, 255, 0.3)",
+      // black: "#2D283E",
+      // silver: "#D1D7E0",
+      // dessert: "#802BB1",
+      // lightBlue: "#564F6F",
+      // glass: "#6b6e70",
+      // errorRed: "#B11226",
+      // transparent: "transparent",
+
+      black: "#222629",
+      silver: "#D1D7E0",
+      dessert: "#86C232",
+      lightBlue: "#61892F",
+      glass: "#6b6e70a2",
+      errorRed: "#B11226",
+      transparent: "transparent",
     },
     fontFamily: {
       merriweather: '"Merriweather", serif',

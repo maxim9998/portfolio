@@ -10,13 +10,6 @@ interface IRoute {
   skip?: boolean;
 }
 
-export const ROUTE_NAMES = {
-  HOME: "Home",
-  ABOUT_ME: "About me",
-  SKILLS: "Skills",
-  CONTACTS: "Contacts",
-};
-
 export const ROUTES: IRoute[] = [
   {
     title: "Home",

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Logo from "../logo/Logo";
 import ProgressBar from "../progressBar/ProgressBar";
-import { ISkill } from "../../../utils/constants/skills";
+import { ISkill } from "../../../views/skills/mainSkills/skillsData";
 
 const SkillCard: FC<ISkill> = ({ name, mastery, logo, description }) => {
   return (

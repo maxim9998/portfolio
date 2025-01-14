@@ -1,19 +1,13 @@
-import React from "react";
-import { NavLink } from "react-router";
-import { ROUTES } from "../../../../utils/constants/linkRoutes";
+import { SECTIONS_DATA } from "../../../../utils/constants/sections";
 
 const NavBar = () => {
   return (
-    <nav className="px-10 gap-10 h-12 backdrop-blur-sm border border-dessert/60 rounded-lg z-10 flex items-center justify-around">
-      {ROUTES.map((route) =>
-        route.skip ? (
-          <React.Fragment key={route.route}></React.Fragment>
-        ) : (
-          <NavLink key={route.route} to={route.route} className={({ isActive }) => (isActive ? "text-dessert font-medium" : "")}>
-            {route.title}
-          </NavLink>
-        )
-      )}
+    <nav className="bg-glass px-10 gap-10 h-12 backdrop-blur-sm border border-dessert/60 rounded-lg flex items-center justify-around">
+      {SECTIONS_DATA.map((section) => (
+        <a key={section.name} href={"#" + section.href} className={"text-dessert font-medium"}>
+          {section.name}
+        </a>
+      ))}
     </nav>
   );
 };

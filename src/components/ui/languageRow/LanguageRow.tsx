@@ -1,6 +1,6 @@
 import { FC } from "react";
 import ProgressBar from "../progressBar/ProgressBar";
-import { ILanguage } from "../../../utils/constants/languages";
+import { ILanguage } from "../../../views/skills/languages/languagesData";
 
 const LanguageRow: FC<ILanguage> = ({ flag, name, proficiency, level }) => {
   return (

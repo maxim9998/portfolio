@@ -6,7 +6,7 @@ import Logo from "../logo/Logo";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-import { ISkill } from "../../../utils/constants/skills";
+import { ISkill } from "../../../views/skills/mainSkills/skillsData";
 
 const RunningLine: FC<{ logos: ISkill[]; className: string }> = ({ logos, className }) => {
   const containerRef = useRef<HTMLDivElement>(null);
