@@ -45,7 +45,7 @@ const Languages = () => {
 
   return (
     <div className="flex flex-col items-center justify-start gap-14 w-full px-8">
-      <h2 className="text-4xl xs:text-xl text-dessert">Beyond Code: Languages I Speak</h2>
+      <h2 className="text-4xl xs:text-xl text-green">Beyond Code: Languages I Speak</h2>
       <div className="flex flex-col items-center justify-start gap-6 w-full" ref={languagesContainer}>
         {knownLanguages.map((language) => {
           return <LanguageRow key={language.name} flag={language.flag} level={language.level} proficiency={language.proficiency} name={language.name} />;

@@ -43,7 +43,7 @@ const AboutMeCards = () => {
             <div className={`w-full justify-self-end p-4 border-l`}>
               <div className="flex items-start justify-start gap-3">
                 {section.icon}
-                <p className="mb-3 text-xl font-bold text-dessert">{section.title}</p>
+                <p className="mb-3 text-xl font-bold text-green">{section.title}</p>
               </div>
               <p className="text-justify text-silver">{section.content}</p>
             </div>

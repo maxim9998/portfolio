@@ -3,18 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      // black: "#2D283E",
-      // silver: "#D1D7E0",
-      // dessert: "#802BB1",
-      // lightBlue: "#564F6F",
-      // glass: "#6b6e70",
-      // errorRed: "#B11226",
-      // transparent: "transparent",
-
       black: "#222629",
       silver: "#D1D7E0",
-      dessert: "#86C232",
-      lightBlue: "#61892F",
+      green: "#86C232",
+      lightGreen: "#61892F",
       glass: "#6b6e70a2",
       errorRed: "#B11226",
       transparent: "transparent",

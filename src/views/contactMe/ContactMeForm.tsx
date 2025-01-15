@@ -32,7 +32,7 @@ const ContactMeForm = () => {
         <CustomInput placeholder={"Name"} width={"100%"} name="name" /> <CustomInput placeholder={"Email"} name="email" />
         <CustomTextArea placeholder="Your message" name={"message"} />
         <div className="flex items-center justify-end w-full">
-          <button type="submit" className="py-2 px-4 bg-dessert text-black rounded-lg font-bold hover:opacity-55">
+          <button type="submit" className="py-2 px-4 bg-green text-black rounded-lg font-bold hover:opacity-55">
             Send
           </button>
         </div>

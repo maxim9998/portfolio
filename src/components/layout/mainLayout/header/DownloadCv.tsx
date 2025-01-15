@@ -10,7 +10,7 @@ const DownloadCv = () => {
   }, []);
 
   return (
-    <button onClick={downloadMyCV} className="rounded-lg text-dessert p-3 xs:px-1 xs:py-4 bg-glass/50 backdrop-blur-md hover:opacity-80 fixed right-4 xs:text-xs">
+    <button onClick={downloadMyCV} className="rounded-lg text-green p-3 xs:px-1 xs:py-4 bg-glass/50 backdrop-blur-md hover:opacity-80 fixed right-4 xs:text-xs">
       Download CV
     </button>
   );

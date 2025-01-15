@@ -7,7 +7,7 @@ const Links = () => {
         const Icon = link.socialIcon;
         return (
           <a href={link.link} key={link.link} target="_blank">
-            <Icon className="text-3xl text-dessert" />
+            <Icon className="text-3xl text-green" />
           </a>
         );
       })}
