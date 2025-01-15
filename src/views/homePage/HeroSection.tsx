@@ -30,7 +30,7 @@ const HeroSection = () => {
 
   return (
     <section className={`w-full ${styles["home_page"]}`} id={getHref(ROUTE_NAMES["HOME"])}>
-      <div className="h-screen w-full flex items-center justify-center flex-col gap-24 text-dessert ">
+      <div className="h-screen w-full flex items-center justify-center flex-col gap-24 text-dessert overflow-x-hidden">
         <div className="w-full flex flex-col items-center justify-center gap-9">
           <div className="italic text-center text-5xl xs:text-3xl font-semibold font-garamond">
             <h1 className="opacity-0" id="header_start">
