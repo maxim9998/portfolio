@@ -3,4 +3,8 @@
   background-repeat: no-repeat;
   background-position-x: 45%;
   background-size: cover;
+
+  @media screen and (max-width: 640px) {
+    background-position: 84%;
+  }
 }

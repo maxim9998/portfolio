@@ -32,7 +32,7 @@ const HeroSection = () => {
     <section className={`w-full ${styles["home_page"]}`} id={getHref(ROUTE_NAMES["HOME"])}>
       <div className="h-screen w-full flex items-center justify-center flex-col gap-24 text-dessert ">
         <div className="w-full flex flex-col items-center justify-center gap-9">
-          <div className="italic xs:text-5xl text-center text-5xl font-semibold font-garamond">
+          <div className="italic text-center text-5xl xs:text-3xl font-semibold font-garamond">
             <h1 className="opacity-0" id="header_start">
               Hello, I’m Maksim
             </h1>
@@ -40,12 +40,12 @@ const HeroSection = () => {
               Front-End Developer & Digital Creator
             </h1>
           </div>
-          <div className="w-1/3 text-center text-sm text-silver">
+          <div className="w-1/3 xs:w-full text-center text-sm xs:text-xs text-silver">
             <TypingAnimationText text={subtitle} delay={2.5} />
           </div>
         </div>
         <div className="flex items-center justify-center w-full">
-          <RunningLine logos={mainStackSkills} className="w-1/2" />
+          <RunningLine logos={mainStackSkills} className="w-1/2 xs:w-full" />
         </div>
         <a className="absolute bottom-10 flex flex-col items-center justify-center gap-4" href={`#${getHref(ROUTE_NAMES["ABOUT_ME"])}`}>
           <h2 className="text-xl">Learn More About Me.</h2>
