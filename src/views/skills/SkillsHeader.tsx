@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
-import RunningLine from "../../components/ui/runningLine/RunningLine";
+
 import TypingAnimationText from "../../components/ui/typingAnimationText/TypingAnimationText";
-import { mainStackSkills } from "./mainSkills/skillsData";
+
 import gsap from "gsap";
 
 const subtitle = "Crafting seamless user experiences with modern web technologies.";
@@ -21,9 +21,6 @@ const SkillsHeader = () => {
         Tech Stack & Expertise
       </h2>
       <TypingAnimationText text={subtitle} delay={1} />
-      <div className="flex items-center justify-center w-full">
-        <RunningLine logos={mainStackSkills} className="w-2/3" />
-      </div>
     </div>
   );
 };

@@ -10,11 +10,9 @@ const DownloadCv = () => {
   }, []);
 
   return (
-    <label className="group fixed right-0 pr-4">
-      <button onClick={downloadMyCV} className="rounded-lg text-dessert border border-dessert/60 bg-glass backdrop-blur h-12 px-2">
-        Download CV
-      </button>
-    </label>
+    <button onClick={downloadMyCV} className="rounded-lg text-dessert p-3 bg-glass/50 backdrop-blur-md hover:opacity-80 fixed right-4">
+      Download CV
+    </button>
   );
 };
 

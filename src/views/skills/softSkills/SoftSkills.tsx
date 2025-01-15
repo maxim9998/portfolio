@@ -19,7 +19,7 @@ const SoftSkills = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: skill,
-          start: "top 90%",
+          start: "top 85%",
           end: "+=200",
           scrub: true,
         },

@@ -19,7 +19,7 @@ const Languages = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: language,
-          start: "top 100%",
+          start: "top 95%",
           toggleActions: "play pause resume reset",
           scrub: false,
         },

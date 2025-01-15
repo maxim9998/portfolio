@@ -3,6 +3,7 @@ import { FC, useMemo, useRef } from "react";
 import styles from "./style.module.scss";
 import Logo from "../logo/Logo";
 
+import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -14,23 +15,37 @@ const RunningLine: FC<{ logos: ISkill[]; className: string }> = ({ logos, classN
   const logosDouble = useMemo(() => [...logos, ...logos], [logos]);
 
   useGSAP(() => {
-    const scrollWidth = containerRef.current?.scrollWidth || 0;
-    const duration = logos.length;
-    const translateX = -(scrollWidth / 2 + 6);
+    gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(".logo_single", {
-      translateX: translateX,
-      repeat: -1,
-      duration,
-      ease: "none",
+    const scrollWidth = containerRef.current?.scrollWidth || 0;
+    const duration = logos.length * 1.4;
+    const translateX = -(scrollWidth / 2) - 30;
+
+    const logosData = gsap.utils.toArray<HTMLDivElement>(containerRef?.current?.children || []);
+
+    logosData.forEach((logo) => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef?.current,
+          toggleActions: "play pause resume reset",
+          scrub: false,
+        },
+      });
+
+      tl.to(logo, {
+        translateX: translateX,
+        repeat: -1,
+        duration,
+        ease: "none",
+      });
     });
   }, []);
 
   return (
     <div className={className}>
-      <div className={`flex items-center justify-start gap-24 px-20 scrollbar-hidden ${styles["blur_borders"]}`} ref={containerRef}>
+      <div className={`flex items-center justify-start gap-16 scrollbar-hidden ${styles["blur_borders"]}`} ref={containerRef}>
         {logosDouble.map((logo, i) => (
-          <Logo src={logo.logo} className={"logo_single"} key={logo.name + i} />
+          <Logo src={logo.logo} key={logo.name + i} />
         ))}
       </div>
     </div>

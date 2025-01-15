@@ -36,11 +36,11 @@ const AboutMeCards = () => {
   }, []);
 
   return (
-    <div className="w-full flex items-start justify-between flex-wrap" ref={cardsRef}>
+    <div className="w-full flex flex-col items-start justify-start" ref={cardsRef}>
       {aboutSections.map((section) => {
         return (
-          <div className={`w-[45%] flex items-center py-3 justify-start`} key={section.title}>
-            <div className={`w-full justify-self-end p-4 border rounded-lg`}>
+          <div className={`w-1/2 flex items-center justify-start`} key={section.title}>
+            <div className={`w-full justify-self-end p-4 border-l`}>
               <div className="flex items-start justify-start gap-3">
                 {section.icon}
                 <p className="mb-3 text-xl font-bold text-dessert">{section.title}</p>
