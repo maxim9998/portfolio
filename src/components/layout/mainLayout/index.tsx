@@ -3,7 +3,7 @@ import Header from "./header/Header";
 
 const MainLayout = () => {
   return (
-    <div className="h-screen w-screen relative overflow-x-hidden">
+    <div className="h-screen w-screen relative">
       <Header />
       <Outlet />
     </div>
