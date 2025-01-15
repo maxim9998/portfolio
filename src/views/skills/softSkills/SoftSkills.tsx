@@ -42,7 +42,7 @@ const SoftSkills = () => {
 
   return (
     <div className="flex flex-col items-center justify-start gap-10 w-full">
-      <h2 className="text-4xl text-dessert">The Human Side of My Expertise</h2>
+      <h2 className="text-4xl xs:text-xl text-dessert">The Human Side of My Expertise</h2>
       <div className="flex flex-col items-center justify-start w-full relative" ref={skillsContainerRef}>
         <div className="absolute w-1 h-full bg-silver rounded-lg top-0 bottom-0"></div>
         {softSkills.map((skill, i) => (

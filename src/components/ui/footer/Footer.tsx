@@ -3,7 +3,7 @@ import RightPart from "./rightPart/RightPart";
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t h-64 flex items-start justify-between p-10">
+    <footer className="w-full border-t flex xs:flex-col items-start justify-between xs:gap-10 p-10">
       <LeftPart />
       <RightPart />
     </footer>

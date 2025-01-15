@@ -21,7 +21,7 @@ const SoftSkill: FC<ISoftSkillExtended> = ({ icon, name, reverse, description })
       <div className={`w-1/2 flex items-center ${renderLeftOrRight.justify} px-6`}>{icon}</div>
       <div className={`rounded-lg w-1/2 flex flex-col justify-center px-6 ${renderLeftOrRight.description}`}>
         <h3 className={`text-2xl text-dessert ${renderLeftOrRight.text}`}>{name}</h3>
-        <TypingAnimationText text={description} delay={0} className={`text-md font-medium my-2 ${renderLeftOrRight.text}`} />
+        <TypingAnimationText text={description} delay={0} className={`text-md xs:text-xs font-medium my-2 ${renderLeftOrRight.text}`} />
       </div>
     </div>
   );

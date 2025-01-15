@@ -16,8 +16,8 @@ const SkillsHeader = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-center justify-start gap-6 p-10">
-      <h2 className="text-4xl text-dessert opacity-0" id="skills_header">
+    <div className="w-full flex flex-col items-center xs:items-start justify-start gap-6 p-10">
+      <h2 className="text-4xl xs:text-3xl text-dessert opacity-0" id="skills_header">
         Tech Stack & Expertise
       </h2>
       <TypingAnimationText text={subtitle} delay={1} />
