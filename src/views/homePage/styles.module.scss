@@ -1,6 +1,10 @@
 .home_page {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 7%, #222629 100%), url("../../assets/images/home_background.jpg");
   background-repeat: no-repeat;
-  background-position-y: 0%;
   background-size: cover;
+
+  @media screen and (max-width: 640px) {
+    background-position-x: 40%;
+    background-position-y: 40%;
+  }
 }

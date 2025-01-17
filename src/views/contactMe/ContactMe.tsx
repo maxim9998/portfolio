@@ -15,7 +15,7 @@ const ContactMe = () => {
   }, []);
 
   return (
-    <section className="w-full flex flex-col items-center justify-start xs:text-center px-10 gap-10 min-h-[74vh] pt-24 xs:pt-4" id={getHref(ROUTE_NAMES["CONTACT_ME"])}>
+    <section className="w-full flex flex-col items-center justify-start xs:text-center px-10 gap-10 min-h-[74vh] pt-24 xs:pt-14" id={getHref(ROUTE_NAMES["CONTACT_ME"])}>
       <h2 className="text-4xl xs:text-3xl text-green opacity-0" id="contact_me_header">
         Reach Out and Let’s Build
       </h2>
