@@ -41,7 +41,7 @@ const SoftSkills = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-start gap-10 w-full">
+    <div className="flex flex-col items-center justify-start xs:justify-center gap-10 xs:gap-3 w-full">
       <h2 className="text-4xl xs:text-xl text-green">The Human Side of My Expertise</h2>
       <div className="flex flex-col items-center justify-start w-full relative" ref={skillsContainerRef}>
         <div className="absolute w-1 h-full bg-silver rounded-lg top-0 bottom-0"></div>

@@ -16,7 +16,7 @@ const SkillsHeader = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-center xs:items-start justify-start gap-6 p-10">
+    <div className="w-full flex flex-col items-center xs:items-start justify-start gap-6 px-10">
       <h2 className="text-4xl xs:text-3xl text-green opacity-0" id="skills_header">
         Tech Stack & Expertise
       </h2>

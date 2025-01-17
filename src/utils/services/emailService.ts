@@ -5,7 +5,7 @@ export type LoadingState = "loading" | "idle" | "error" | "success";
 class EmailService {
   constructor() {
     if (EmailService.isInit) {
-      throw new Error("This class cannot be called more than once!");
+      throw new Error("This class cannot be initiated more than once!");
     } else {
       EmailService.isInit = true;
     }
@@ -16,13 +16,15 @@ class EmailService {
   sendEmail(form: HTMLFormElement | null): Promise<void> {
     return new Promise((resolve, reject) => {
       if (form) {
-        console.log("form", form);
         emailjs
           .sendForm("service_fvfdppe", "template_dluxwod", form, {
             publicKey: "6b0kJ0v18xFKiNPMM",
           })
           .then(() => resolve())
-          .catch((error) => reject(error));
+          .catch((error) => {
+            console.error(error);
+            reject(error);
+          });
       }
     });
   }
