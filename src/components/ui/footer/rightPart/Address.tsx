@@ -1,8 +1,8 @@
 const Address = () => {
   return (
-    <div className="flex items-start justify-between w-full">
+    <div className="flex items-start justify-between">
       <p className="text-green w-20">Address:</p>
-      <address className="not-italic flex flex-col items-start text-left w-[54.3%]">
+      <address className="not-italic flex flex-col items-start text-left">
         <p className="text-lightGreen">
           <span>Tsarav Aghbyur St, Avan District, Yerevan 0052</span>
           <br />
