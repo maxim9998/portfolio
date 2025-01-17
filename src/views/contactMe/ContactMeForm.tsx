@@ -25,6 +25,8 @@ const ContactMeForm = () => {
     },
     onSuccess: () => {
       toast.success("Your email was sent successfully");
+
+      methods.reset();
     },
     onError: () => {
       toast.error("Something went wrong please try again later");
@@ -33,8 +35,7 @@ const ContactMeForm = () => {
 
   const onSubmit: SubmitHandler<IInputs> = useCallback(async () => {
     onSendEmail();
-    methods.reset();
-  }, [methods, onSendEmail]);
+  }, [onSendEmail]);
 
   return (
     <FormProvider {...methods}>

@@ -16,6 +16,7 @@ class EmailService {
   sendEmail(form: HTMLFormElement | null): Promise<void> {
     return new Promise((resolve, reject) => {
       if (form) {
+        console.log("form", form);
         emailjs
           .sendForm("service_fvfdppe", "template_dluxwod", form, {
             publicKey: "6b0kJ0v18xFKiNPMM",
