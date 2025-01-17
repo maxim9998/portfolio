@@ -1,6 +1,5 @@
-import gsap from "gsap";
-import { FC, useCallback } from "react";
-import { useFormContext } from "react-hook-form";
+import { FC, useMemo } from "react";
+import { FieldValues, RegisterOptions, useFormContext } from "react-hook-form";
 
 interface ICustomInput {
   placeholder: string;
@@ -16,21 +15,24 @@ const CustomInput: FC<ICustomInput> = ({ placeholder, width = "100%", name, isRe
     formState: { errors },
   } = useFormContext();
 
-  const onFocus = useCallback((input: HTMLInputElement) => {
-    gsap.to(input, {
-      borderColor: "#86C232",
-      duration: 0.4,
-      ease: "power1.inOut",
-    });
-  }, []);
+  const isEmail = useMemo(() => name === "email", [name]);
 
-  const onBlur = useCallback((input: HTMLInputElement) => {
-    gsap.to(input, {
-      borderColor: "transparent",
-      duration: 0.4,
-      ease: "power1.inOut",
-    });
-  }, []);
+  const registerData = useMemo(() => {
+    const data: RegisterOptions<FieldValues, string> = {
+      required: isRequired,
+    };
+
+    if (isEmail) {
+      data.pattern = {
+        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+        message: "Please enter a valid email",
+      };
+    }
+
+    return data;
+  }, [isEmail, isRequired]);
+
+  const errorText = useMemo(() => typeof errors[name]?.message === "string" && errors[name]?.message, [errors, name]);
 
   return (
     <div style={{ width }}>
@@ -38,8 +40,8 @@ const CustomInput: FC<ICustomInput> = ({ placeholder, width = "100%", name, isRe
         {placeholder}
         {isRequired && <span className="text-errorRed text-xs ml-1">*</span>}
       </p>
-      <input type={type} id={name} className="focus:outline-none rounded-lg text-black py-1 px-2 border-2 border-transparent w-full" placeholder={"Enter " + placeholder.toLowerCase()} onFocus={(e) => onFocus(e.target)} {...register(name, { required: isRequired, onBlur: (e) => onBlur(e.target) })} />
-      <p className="text-errorRed text-xs mt-1">{typeof errors[name]?.message === "string" && errors[name]?.message}</p>
+      <input type={type} id={name} className="focus:outline-none rounded-lg text-black py-1 px-2 border-2 border-transparent w-full" placeholder={"Enter " + placeholder.toLowerCase()} {...register(name, registerData)} />
+      <p className="text-errorRed text-xs mt-1">{errorText}</p>
     </div>
   );
 };
