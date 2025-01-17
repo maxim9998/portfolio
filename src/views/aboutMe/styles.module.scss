@@ -4,11 +4,7 @@
   background-position-x: 45%;
   background-size: cover;
 
-  @media screen and (max-width: 640px) {
-    background-position: 86%;
-  }
-
-  @media screen and (max-width: 390px) {
-    background-position: 84%;
+  @media screen and (max-width: 1536px) {
+    background: url("");
   }
 }

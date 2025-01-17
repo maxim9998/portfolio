@@ -38,7 +38,7 @@ const ContactMeForm = () => {
 
   return (
     <FormProvider {...methods}>
-      <form className="xl:w-1/3 w-full flex flex-col items-center justify-center gap-2 rounded-lg" onSubmit={methods.handleSubmit(onSubmit)} ref={currentFormRef}>
+      <form className="xl:w-2/3 2xl:w-1/3 w-full flex flex-col items-center justify-center gap-2 rounded-lg" onSubmit={methods.handleSubmit(onSubmit)} ref={currentFormRef}>
         <ToastContainer />
         <CustomInput placeholder={"Name"} width={"100%"} name="name" />
         <CustomInput placeholder={"Email"} name="email" />

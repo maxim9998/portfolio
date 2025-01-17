@@ -39,7 +39,7 @@ const AboutMeCards = () => {
     <div className="w-full flex flex-col items-start justify-start" ref={cardsRef}>
       {aboutSections.map((section) => {
         return (
-          <div className={`w-1/2 xs:w-full flex items-center justify-start`} key={section.title}>
+          <div className={`w-full 2xl:w-1/2 flex items-center justify-start`} key={section.title}>
             <div className={`w-full justify-self-end p-4 border-l`}>
               <div className="flex items-start justify-start gap-3">
                 {section.icon}
