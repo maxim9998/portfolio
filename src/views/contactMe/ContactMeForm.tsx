@@ -5,7 +5,7 @@ import CustomTextArea from "../../components/ui/customTextArea/CustomTextArea";
 import { useForm, FormProvider, SubmitHandler } from "react-hook-form";
 import emailService from "../../utils/services/emailService";
 import { useMutation } from "@tanstack/react-query";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import Loader from "../../components/ui/loader/Loader";
 
 interface IInputs {
@@ -23,12 +23,15 @@ const ContactMeForm = () => {
     mutationFn: () => {
       return emailService.sendEmail(currentFormRef.current);
     },
-    onSuccess: () => {
+    onSuccess: async () => {
+      const { toast } = await import("react-toastify");
       toast.success("Your email was sent successfully");
 
       methods.reset();
     },
-    onError: () => {
+    onError: async () => {
+      const { toast } = await import("react-toastify");
+
       toast.error("Something went wrong please try again later");
     },
   });
