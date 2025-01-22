@@ -18,8 +18,7 @@ const RunningLine: FC<{ logos: ISkill[]; className: string }> = ({ logos, classN
     gsap.registerPlugin(ScrollTrigger);
 
     const scrollWidth = containerRef.current?.scrollWidth || 0;
-    const duration = logos.length * 1.4;
-    const translateX = -(scrollWidth / 2) - 30;
+    const duration = logos.length;
 
     const logosData = gsap.utils.toArray<HTMLDivElement>(containerRef?.current?.children || []);
 
@@ -33,7 +32,7 @@ const RunningLine: FC<{ logos: ISkill[]; className: string }> = ({ logos, classN
       });
 
       tl.to(logo, {
-        translateX: translateX,
+        translateX: -scrollWidth / 1.97,
         repeat: -1,
         duration,
         ease: "none",

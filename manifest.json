@@ -1,0 +1,21 @@
+{
+  "name": "Maksim Harutyunyan Portfolio",
+  "short_name": "MH Portfolio",
+  "description": "A portfolio website showcasing Maksim Harutyunyan's projects, skills, and experience as a frontend developer.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d6efd",
+  "icons": [
+    {
+      "src": "/assets/favicon/favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/favicon/favicon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

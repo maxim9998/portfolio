@@ -23,7 +23,7 @@ const AboutMeCards = () => {
 
       tl.from(card, {
         opacity: 0,
-        x: 20,
+        x: window.screen.width >= 3840 ? 0 : 15,
         duration: 0.1,
         ease: "none",
       }).to(card, {
@@ -36,16 +36,16 @@ const AboutMeCards = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-start justify-start" ref={cardsRef}>
+    <div className="w-full flex flex-col items-start justify-start 4k:items-center" ref={cardsRef}>
       {aboutSections.map((section) => {
         return (
           <div className={`w-full 2xl:w-1/2 flex items-center justify-start`} key={section.title}>
-            <div className={`w-full justify-self-end p-4 border-l`}>
-              <div className="flex items-start justify-start gap-3">
+            <div className={`w-full justify-self-end p-4 border-l 4k:border-l-0`}>
+              <div className="flex items-start justify-start gap-3 4k:justify-center">
                 {section.icon}
                 <p className="mb-3 text-xl font-bold text-green">{section.title}</p>
               </div>
-              <p className="text-justify text-silver">{section.content}</p>
+              <p className="text-justify text-silver 4k:text-center">{section.content}</p>
             </div>
           </div>
         );

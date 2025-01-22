@@ -28,6 +28,8 @@ export default {
       },
       screens: {
         xs: { max: "640px" },
+        "2k": { min: "2560px" },
+        "4k": { min: "3840px" },
       },
     },
   },

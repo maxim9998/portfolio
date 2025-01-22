@@ -9,7 +9,7 @@ const ContactMe = lazy(() => import("./contactMe/ContactMe.tsx"));
 
 const HomePage = () => {
   return (
-    <main className="flex flex-col items-center justify-start w-screen">
+    <main className="flex flex-col items-center justify-start w-full">
       <Suspense fallback={<LoadingPage />}>
         <HeroSection />
         <AboutMe />

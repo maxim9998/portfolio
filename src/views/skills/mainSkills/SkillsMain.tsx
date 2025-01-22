@@ -31,7 +31,7 @@ const SkillsMain = () => {
         skill,
         {
           opacity: 0,
-          scale: 0.75,
+          // scale: 0.75,
         },
         {
           opacity: 1,
@@ -45,7 +45,7 @@ const SkillsMain = () => {
   }, []);
 
   return (
-    <div className={styles["skills_main_cards"]} ref={skillsContainerRef}>
+    <div className={`${styles["skills_main_cards"]}`} ref={skillsContainerRef}>
       {mainStackSkills.map((skill) => {
         return <SkillCard key={skill.name} name={skill.name} mastery={skill.mastery} logo={skill.logo} description={skill.description} />;
       })}
