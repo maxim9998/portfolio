@@ -6,8 +6,6 @@
   background-size: cover;
 
   @media screen and (max-width: 640px) {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 7%, #222629 100%), url("../../assets/images/home_background.jpg");
-    background-position-x: 50%;
-    background-position-y: 60%;
+    background-position-x: 10%;
   }
 }
