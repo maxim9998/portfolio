@@ -7,8 +7,8 @@ import gsap from "gsap";
 import { getHref, ROUTE_NAMES } from "../../utils/constants/sections.ts";
 
 import styles from "./styles.module.scss";
-import RunningLine from "../../components/ui/runningLine/RunningLine.tsx";
-import { mainStackSkills } from "../skills/mainSkills/skillsData.ts";
+// import RunningLine from "../../components/ui/runningLine/RunningLine.tsx";
+// import { mainStackSkills } from "../skills/mainSkills/skillsData.ts";
 
 const subtitle = "Specializing in modern, responsive, and user-friendly digital solutions with seamless functionality and exceptional user experiences.";
 
@@ -44,9 +44,9 @@ const HeroSection = () => {
             <TypingAnimationText text={subtitle} delay={2.5} />
           </div>
         </div>
-        <div className="flex items-center justify-center w-full">
+        {/* <div className="flex items-center justify-center w-full">
           <RunningLine logos={mainStackSkills} className="w-1/2 xs:w-full" />
-        </div>
+        </div> */}
         <a className="absolute bottom-10 flex flex-col items-center justify-center gap-4" href={`#${getHref(ROUTE_NAMES["ABOUT_ME"])}`}>
           <h2 className="text-xl">Learn More About Me.</h2>
           <LetsStartButtonArrow />
