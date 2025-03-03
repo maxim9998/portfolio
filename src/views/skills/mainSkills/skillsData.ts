@@ -1,17 +1,18 @@
-import javascriptLogo from "@assets/images/logos/javascript.svg";
-import htmlLogo from "@assets/images/logos/html.svg";
-import cssLogo from "@assets/images/logos/css.svg";
-import typescriptLogo from "@assets/images/logos/typescript.svg";
-import graphqlLogo from "@assets/images/logos/graphql.svg";
-import nodejsLogo from "@assets/images/logos/nodejs.svg";
-import reactLogo from "@assets/images/logos/react.svg";
 import apolloLogo from "@assets/images/logos/apollo.svg";
+import cssLogo from "@assets/images/logos/css.svg";
+import expressLogo from "@assets/images/logos/express.svg";
+import graphqlLogo from "@assets/images/logos/graphql.svg";
 import gsapLogo from "@assets/images/logos/gsap.svg";
+import htmlLogo from "@assets/images/logos/html.svg";
+import javascriptLogo from "@assets/images/logos/javascript.svg";
 import materialUiLogo from "@assets/images/logos/materialUi.svg";
 import nextjsLogo from "@assets/images/logos/nextjs.svg";
+import nodejsLogo from "@assets/images/logos/nodejs.svg";
+import reactLogo from "@assets/images/logos/react.svg";
 import reduxLogo from "@assets/images/logos/redux.svg";
 import sassLogo from "@assets/images/logos/sass.svg";
 import tailwindcssLogo from "@assets/images/logos/tailwindcss.svg";
+import typescriptLogo from "@assets/images/logos/typescript.svg";
 import vitejsLogo from "@assets/images/logos/vitejs.svg";
 import webpackLogo from "@assets/images/logos/webpack.svg";
 
@@ -70,6 +71,12 @@ export const mainStackSkills: ISkill[] = [
     name: "Next.js",
     mastery: 85,
     description: "Skilled in SSR, SSG, and building APIs for full-stack web applications.",
+  },
+  {
+    logo: expressLogo,
+    name: "Express.js",
+    mastery: 85,
+    description: "Skilled in building RESTful APIs, middleware, and authentication with JWT & OAuth.",
   },
   {
     logo: apolloLogo,
