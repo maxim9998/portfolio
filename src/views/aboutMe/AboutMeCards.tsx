@@ -1,8 +1,8 @@
-import { useRef } from "react";
-import { aboutSections } from "./aboutSections";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { useRef } from "react";
+import { aboutSections } from "./aboutSections";
 
 const AboutMeCards = () => {
   const cardsRef = useRef<HTMLDivElement>(null);
@@ -23,7 +23,7 @@ const AboutMeCards = () => {
 
       tl.from(card, {
         opacity: 0,
-        x: window.screen.width >= 3840 ? 0 : 15,
+        x: 4,
         duration: 0.1,
         ease: "none",
       }).to(card, {
