@@ -2,11 +2,11 @@ import { useCallback } from "react";
 
 import { downloadPDFfromUrl } from "../../../../utils/helpers/downloadFile";
 
-import myCv from "@assets/pdfs/Maksim Harutyunyan frontend resume.pdf";
+import myCv from "@assets/pdfs/Maksim Harutyunyan Front-End CV.pdf";
 
 const DownloadCv = () => {
   const downloadMyCV = useCallback(() => {
-    downloadPDFfromUrl(myCv, "Maksim Harutyunyan frontend resume");
+    downloadPDFfromUrl(myCv, "Maksim Harutyunyan Front-End CV");
   }, []);
 
   return (
