@@ -1,10 +1,10 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useRef } from "react";
+import { memo, useRef } from "react";
 import { aboutSections } from "./aboutSections";
 
-const AboutMeCards = () => {
+const AboutMeCards = memo(() => {
   const cardsRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
@@ -52,6 +52,6 @@ const AboutMeCards = () => {
       })}
     </div>
   );
-};
+})
 
 export default AboutMeCards;
